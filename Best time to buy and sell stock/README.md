@@ -1,35 +1,35 @@
-# 238. Product of Array Except Self
+# 121. Best Time to Buy and Sell Stock
 
-**Difficulty:** Medium
+**Difficulty:** Easy
 
 ---
 
 ## Problem Description
 
-Given an integer array `nums`, return an array `answer` such that `answer[i]` is equal to the product of all the elements of `nums` except `nums[i]`.
+You are given an array `prices` where `prices[i]` is the price of a given stock on the `i`th day.
 
-The product of any prefix or suffix of `nums` is guaranteed to fit in a 32-bit integer.
+You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
 
-**Note:** You must write an algorithm that runs in `O(n)` time and **without using the division operation**.
+Return the **maximum profit** you can achieve from this transaction. If you cannot achieve any profit, return `0`.
 
 ---
 
 ### Examples
 
-#### Example 1
+**Example 1**  
+**Input:** `prices = [7,1,5,3,6,4]`  
+**Output:** `5`  
+**Explanation:** Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6 - 1 = 5.
 
-**Input:** `nums = [1,2,3,4]`  
-**Output:** `[24,12,8,6]`
-
-#### Example 2
-
-**Input:** `nums = [-1,1,0,-3,3]`  
-**Output:** `[0,0,9,0,0]`
+**Example 2**  
+**Input:** `prices = [7,6,4,3,1]`  
+**Output:** `0`  
+**Explanation:** In this case, no transactions are done, so the max profit = 0.
 
 ---
 
 ### Constraints
 
-- `2 <= nums.length <= 10^5`
-- `-30 <= nums[i] <= 30`
-- The product of any prefix or suffix of `nums` is guaranteed to fit in a 32-bit integer.
+- `1 <= prices.length <= 10^5`
+- `0 <= prices[i] <= 10^4`
+

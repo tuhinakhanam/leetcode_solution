@@ -1,4 +1,4 @@
-#include<iostream>
+#include <iostream>
 #include <vector>
 using namespace std;
 string removeDuplicates(string s, int k)
@@ -30,7 +30,8 @@ string removeDuplicates(string s, int k)
     return s.substr(0, slow);
 }
 
-int main() {
+int main()
+{
     string s = "pbbcggttciiippooaais";
     int k = 2;
     string ans = removeDuplicates(s, k);

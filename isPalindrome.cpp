@@ -22,7 +22,12 @@ int main() {
     string s;
     cin >> s;
 
-    cout << isPalindrome(s) << endl;
+    if(isPalindrome(s)) {
+        cout << "The string is a palindrome!" << endl;
+    }
+    else{
+        cout << "The string is NOT a palindrome!" << endl;
+    }
 
     return 0;
 }

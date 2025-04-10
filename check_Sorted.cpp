@@ -1,39 +1,39 @@
 #include <iostream>
 #include <vector>
-#include <algorithm>
-
 using namespace std;
 
-bool CheckSorted(vector<int> &arr, int i, int &n) {
-    // Base Case
-    if(i == n-1) {
+bool checkSorted(vector<int> &arr, int &n, int i)
+{
+    // base case
+    if (i == n - 1)
+    {
         return true;
     }
 
-    // Recursive Case
-    if(arr[i+1] < arr[i]) {
+    // 1 case solve krna h
+    if (arr[i + 1] <= arr[i])
         return false;
-    }
 
-    return CheckSorted(arr, i+1, n);
+    // baaki recursio sambhal lega
+    bool ans = checkSorted(arr, n, i + 1);
+    return ans;
 }
 
-int main() {
-    int n;
-    cin >> n;
-    vector<int> arr(n);
-    for(int i = 0; i < n; i++) {
-        cin >> arr[i];
-    }
-    
+int main()
+{
+    vector<int> v{4, 3, 1, 2, 4, 4};
+    int n = v.size();
     int i = 0;
+    bool isSorted = checkSorted(v, n, i);
 
-    bool isSorted = CheckSorted(arr, i, n);
-    if(isSorted) {
+    if (isSorted)
+    {
         cout << "Array is sorted" << endl;
     }
-    else {
+    else
+    {
         cout << "Array is not sorted" << endl;
     }
 
+    return 0;
 }

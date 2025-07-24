@@ -1,0 +1,45 @@
+# 🐭 Rat in a Maze (Backtracking)
+
+## 📌 Problem Statement:
+A rat is placed in a maze represented by a `N x N` grid, where:
+- `1` represents open paths
+- `0` represents blocked cells
+
+The rat starts at **top-left (0,0)** and must reach **bottom-right (N-1,N-1)**. It can move in **four directions**:
+- **D** = Down
+- **L** = Left
+- **R** = Right
+- **U** = Up
+
+We need to **print all possible paths** that the rat can take.
+
+---
+
+## 💡 Concepts Used:
+- ✅ Backtracking
+- ✅ Recursion
+- ✅ Grid traversal (4 directions)
+- ✅ Visited array to avoid cycles
+- ✅ String building to track path
+
+---
+
+## 🔍 My Understanding (Tuhina's Notes ✨):
+- Each path is built step-by-step by **trying a move**, **recursing**, then **undoing the move** (backtrack).
+- I understood how **base case** works when `(i == row-1 && j == col-1)`
+- The `isSafe()` function checks:
+  - Bounds
+  - Not visited
+  - Not a wall (1 only)
+- We store the path as a string like `"DDRDRR"` using `output + 'D'`, `'R'`, etc.
+
+---
+
+## 🧪 Sample Input:
+```cpp
+int maze[4][4] = {
+  {1, 0, 0, 0},
+  {1, 1, 0, 1},
+  {1, 1, 0, 0},
+  {0, 1, 1, 1}
+};
